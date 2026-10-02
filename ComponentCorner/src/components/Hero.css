@@ -1,0 +1,59 @@
+.hero {
+  min-height: 350px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+
+  background: linear-gradient(
+    rgba(70, 45, 30, 0.75),
+    rgba(70, 45, 30, 0.75)
+  ),
+  url('https://placehold.co/1200x400/8B6F47/ffffff?text=Fresh+Coffee');
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-content h2 {
+  margin-bottom: 15px;
+
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  margin-bottom: 25px;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.hero-content button {
+  padding: 12px 28px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: white;
+  color: #5c4033;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.hero-content button:hover {
+  background-color: #f0f0f0;
+}

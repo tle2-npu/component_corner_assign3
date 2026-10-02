@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #dff3ff;
+  border-bottom: 1px solid #b8dceF;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1f4e79;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+  padding: 10px 20px;
+  border: 2px solid #8fc5e8;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1f4e79;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #0b7ac2;
+}
