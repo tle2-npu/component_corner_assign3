@@ -1,20 +1,22 @@
 import './ProductCard.css';
 
-function ProductCard({ name, price, image, description }) {
+function ProductCard({ product, onAddToCart }) {
     return (
         <div className="product-card">
             <img
-            src={image}
-            alt={name}
-            className="product-image"
+                src={product.image}
+                alt={product.name}
+                className="product-image"
             />
 
             <div className="product-info">
-                <h2>{name}</h2>
-                <p>{description}</p>
-                <p>${price}</p>
+                <h2>{product.name}</h2>
+                <p>{product.description}</p>
+                <p>${product.price}</p>
 
-                <button>Add to Cart</button>
+                <button onClick={() => onAddToCart(product)}>
+                Add to Cart
+                </button>
             </div>
         </div>
     );
