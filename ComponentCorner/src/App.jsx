@@ -4,6 +4,7 @@ import ProductCard from './components/ProductCard';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
+import CartItem from './components/CartItem';
 
 function App() {
   const products = [
@@ -54,8 +55,12 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    console.log("Added to cart:", product);
+    // console.log("Added to cart:", product);
     setCart([...cart, product]);
+  };
+
+  const removeFromCart = (productId) => {
+    setCart(cart.filter((item) => item.id !== productId));
   };
 
   return (
@@ -81,6 +86,19 @@ function App() {
           />
         ))}
       </main>
+
+      <section className="cart-section">
+        <h2>Shopping Cart</h2>
+
+        {cart.map((item) => (
+          <CartItem
+            key={item.id}
+            name={item.name}
+            price={item.price}
+            onRemove={() => removeFromCart(item.id)}
+          />
+        ))}
+      </section>
       
       <Footer
         storeName="ComponentCorner"
