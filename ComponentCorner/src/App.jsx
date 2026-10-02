@@ -60,7 +60,9 @@ function App() {
 
   return (
     <div className="app">
-      <Header storeName="ComponentCorner" />
+      <Header storeName="ComponentCorner"
+              cartCount={cart.length}
+      />
 
       <Hero
         title="Fresh Coffee, Delivered"
