@@ -94,18 +94,27 @@ function App() {
       <section className="cart-section">
         <h2>Shopping Cart</h2>
 
-        {cart.map((item) => (
-          <CartItem
-            key={item.id}
-            name={item.name}
-            price={item.price}
-            onRemove={() => removeFromCart(item.id)}
-          />
-        ))}
+        {cart.length > 0 ? (
+          <>
+            {cart.map((item) => (
+              <CartItem
+                key={item.id}
+                name={item.name}
+                price={item.price}
+                onRemove={() => removeFromCart(item.id)}
+              />
+            ))}
 
-        <div className="cart-total">
-          <h3>Total: ${cartTotal.toFixed(2)}</h3>
-        </div>
+            <div className="cart-total">
+              <h3>Total: ${cartTotal.toFixed(2)}</h3>
+            </div>
+          </> 
+        ) : (
+          <div className="empty-cart">
+            <p>Your cart is empty.</p>
+            <p>Add some products to get started!</p>
+          </div>
+        )}
       </section>
       
       <Footer
