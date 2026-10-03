@@ -63,6 +63,10 @@ function App() {
     setCart(cart.filter((item) => item.id !== productId));
   };
 
+  const cartTotal = cart.reduce(
+    (total, item) => total + item.price, 0
+  );
+
   return (
     <div className="app">
       <Header storeName="ComponentCorner"
@@ -98,6 +102,10 @@ function App() {
             onRemove={() => removeFromCart(item.id)}
           />
         ))}
+
+        <div className="cart-total">
+          <h3>Total: ${cartTotal.toFixed(2)}</h3>
+        </div>
       </section>
       
       <Footer

@@ -37,3 +37,15 @@ main h2 {
 .cart-section h2 {
   margin-bottom: 20px;
 }
+
+.cart-total {
+  width: 600px;
+  text-align: right;
+  margin-top: 20px;
+  padding: 16px;
+  border-top: 2px solid #ddd;
+}
+
+.cart-total h3 {
+  font-size: 20px;
+}
